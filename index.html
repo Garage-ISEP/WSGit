@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <link rel="stylesheet" href="./style.css">
+  <title>Workshop Git</title>
+</head>
+<body>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <h1>Workshop Git</h1>
+      </div>
+    </div>
+  </nav>
+  <section class="hero is-warning">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          Workshop 2
+        </h1>
+        <h2 class="subtitle">
+          It GIT's better !
+        </h2>
+      </div>
+    </div>
+  </section>
+  <div class="container" style="margin: 30px auto;">
+    <div class="tile is-ancestor">
+      <div class="tile is-parent box">
+        <div class="content">
+          <p class="title">Les branches...</p>
+          <p class="subtitle">... du magnifique arbre de git !</p>
+          <h2>Quand est-ce qu'on utilise une branche ?</h2>
+          <p>
+            <b>Tout le temps !</b> À chaque fonctionnalités à développer on créer une branche, de façon à ce qu'il n'y ai pas deux personnes qui travaillent simultanément sur une branche.
+            Ce dernier point est très important comme vu durant le workshop. <br>
+            Par défaut vous travaillez sur la branche master. Vous pouver créer autant de branches que vous le souhaitez et ces branches peuvent être créés à partir de n'importe quelle branche. 
+          </p>
+          <h2>Les commandes de base pour gérer les branches</h3>
+          <div class="tile is-child box is-vertical">
+            <div class="content">
+              <h3>git branch -a</h3>
+              <p>Liste l'ensemble des branches</p>
+            </div>
+          </div>
+          <div class="tile is-child box is-vertical" style="margin-top: 20px !important;">
+            <div class="content">
+              <h3>git branch &lt;nom de la branche à créer&gt;</h3>
+              <p>Créer une branche</p>
+            </div>
+          </div>
+          <div class="tile is-child box is-vertical" style="margin-top: 20px !important;">
+            <div class="content">
+              <h3>git checkout &lt;nom d'une branche existante&gt;</h3>
+              <p>Permet de vous déplacer d'une branche à une autre</p>
+            </div>
+          </div>
+          <div class="tile is-child box is-vertical" style="margin-top: 20px !important;">
+            <div class="content">
+              <h3>git checkout -b &lt;nom de la branche à créer&gt;</h3>
+              <p>Créer une branche et vous y met</p>
+            </div>
+          </div>
+          <div class="tile is-child box is-vertical" style="margin-top: 20px !important;">
+            <div class="content">
+              <h3>git merge &lt;nom d'une branche&gt;</h3>
+              <p>
+                Vous permet de créer <br>
+                L'option --no-ff peut être utilisé pour éviter les fast-forward (cf. StackOverflow).
+              </p>
+            </div>
+          </div>
+          <div class="tile is-child box is-vertical" style="margin-top: 20px !important;">
+            <div class="content">
+              <h3>git branch -d &lt;nom d'une branche&gt;</h3>
+              <p>Supprime la branche référencée. Une fois qu'une branche n'est plus utilisée il n'est pas nécessaire de la garder.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container" style="margin: 30px auto;">
+    <div class="tile is-ancestor">
+      <div class="tile is-parent box">
+        <div class="content" style="width: 100%;">
+          <p class="title">Les branches distantes</p>
+          <p class="subtitle">Quelques commandes qui pourrons vous sauver la vie</p>
+          <div class="tile is-child box is-vertical">
+            <div class="content">
+              <h3>git push &lt;remote&gt; &lt;branche&gt;</h3>
+              <p>Permet d'envoyer une branche vers un répertoire distant, comme origin.</p>
+            </div>
+          </div>
+          <div class="tile is-child box is-vertical" style="margin-top: 20px !important;">
+            <div class="content">
+              <h3>git push &lt;remote&gt; --delete &lt;branche&gt;</h3>
+              <p>Permet de supprimer une branche d'un répertoire distant</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container" style="margin: 30px auto;">
+    <div class="tile is-ancestor">
+      <div class="tile is-parent box">
+        <div class="content" style="width: 100%;">
+          <p class="title">Les bonus</p>
+          <p class="subtitle">Pour vous aider à aller toujours plus loin, toujours plus haut, toujours plus fort !</p>
+          <div class="tile is-child box is-vertical">
+            <div class="content">
+              <h3>git log --graph</h3>
+              <p>Représente l'historique des logs sous forme de graph, ce qui permet de mieux voir les branches.</p>
+              <p>L'option <b>--oneline</b> peut être utilisée afin d'enlever les informations superflues qui nuiraient à la bonne lecture du graph.</p>
+            </div>
+          </div>
+          <div class="tile is-child box is-vertical" style="margin-top: 20px !important;">
+            <div class="content">
+              <h3>git show &lt;identifiant du commit&gt;</h3>
+              <p>Équivalent valent de diff mais directement avec le parent du commit</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container" style="margin: 30px auto;">
+    <div class="tile is-ancestor">
+      <div class="tile is-parent box">
+        <div class="content" style="width: 100%;">
+          <p class="title">Exercice 2</p>
+          <p class="subtitle">Let's GIT collaborative !</p>
+          <h5>Contexte</h5>
+          <ul>
+            <li>          On souhaite réaliser la page de connexion d’un site en HTML mais on ne demande pas qu’elle soit fonctionnelle.            </li>
+            <li>Le chargé de projet a mit en ligne les features suivantes :</li>
+            <ul>
+              <li>Une entête avec un logo et le nom du site et un footer avec un lien vers des une page de CGU (prendre un lorem ipsum pour les CGU). (FT-01)</li>
+              <li>Un lien vers un formulaire d’inscription au site depuis la page de connexion et un formulaire d’inscription (adresse e-mail, pseudo, mot de passe). (FT-02)</li>
+              <li>Un formulaire de connexion sur la page de connexion (avec pseudo, mdp, validation de cgu champs obligatoires) et une redirection (lien HTML) vers une page d’accueil, qui contiendra un lien pour revenir à la page de connexion. (FT-03)</li>
+            </ul>
+          </ul>
+          <h5>Consignes</h5>
+          <ul>
+            <li>On attribut à chaque développeur une feature. Elles sont indépendantes (c’est-à-dire qu’elle n’est pas parent d’une autre feature à ce stade du développement). Ils effectueront chacun au moins 2 commits avec des messages appropriés.</li>
+            <li>Chaque contributeur doit partir de la version 1.0 du projet qui comporte une page de connexion vide (avec le squelette d’une page html classique, prenant comme style un fichier main.css inconnu) , et un README.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="hero is-primary">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          Workshop 1
+        </h1>
+        <h2 class="subtitle">
+          Let's GIT started !
+        </h2>
+      </div>
+    </div>
+  </section>
+  <div class="container" style="margin: 30px auto;">
+    <div class="tile is-ancestor">
+      <div class="tile is-parent box">
+        <div class="content">
+          <p class="title">Intsaller Git et se faire un compte GitHub</p>
+          <p class="subtitle">Let's GIT it !</p>
+          <h2>Installer Git</h2>
+          <p>Désolé je suis en retard mais en attendant je vous propose d'installer git !</p>
+            <a href="https://git-scm.com/downloads"><p>Téléchargez le en cliquant ici</p></a>
+          <div class="tile is-child box is-vertical">
+            <div class="content">
+              <h3>Pour tous</h3>
+              <p>Lorsque vous installez attention à indiquer votre éditeur de texte favori ou notepad en tant qu'éditeur au lieu de Vim. Sinon vous allez être perdus ^^'</p>
+              <img style="display: block; margin: 0 auto;" src="./editor.PNG" alt="Etape éditeur de texte pour Git">
+              <p style="color: red">/!\ C'est à cette étape là qu'il faut changer VIM par votre éditeur de préférence</p>
+            </div>
+          </div>
+          <div class="tile is-child box is-vertical" style="margin-top: 20px !important;">
+            <div class="content">
+              <h3>Pour windows</h3>
+              <p>Vérifiez bien d'avoir Git Bash et Git CMD à la fin de l'installation. Ce sont deux émulateurs de terminal qui vous permettront d'utiliser Git. Nous utiliserons Git Bash de façon à ce que tout le monde ait un environnement similaire.</p>
+            </div>
+          </div>
+          <h2>Se créer un compte sur GitHub</h3>
+          <p>Maintenant créez-vous un compte sur <a href="https://github.com/join?source=header-home">GitHub</a>. En utilisant votre compte ISEP vous pourrez bénéficier de toutes les fonctionnalités de GitHub.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container" style="margin: 30px auto;">
+    <div class="tile is-ancestor">
+      <div class="tile is-parent box">
+        <div class="content">
+          <p class="title">Aidez moi !</p>
+          <p class="subtitle">J'ai tout cassé</p>
+          <p>Votre mission, si vous l'acceptez, est de sauver ma peau en trouvant mon erreur. <a href="./casser/index.html">Par ici ></a></p>
+      </div>
+    </div>
+  </div>
+  <div class="container" style="margin: 30px auto;">
+    <div class="tile is-ancestor">
+      <div class="tile is-parent box">
+        <div class="content">
+          <p class="title">Le terminal...</p>
+          <p class="subtitle">... et les lignes de commandes</p>
+          <h2>Qu'est-ce que le terminal</h2>
+          <p>
+            Il y a très longtemps il n'y avait pas d'interface graphique sur les PC : pas de souris, pas d'image, pas de fond d'écran débile, ...
+            À la place on donnait des commandes à l'ordinateur. Un peu comme indiquer le chemin à quelqu'un : aller droite, tourner 90 degrés, ...
+            Sauf que l'ordinateur a sa propre syntaxe. On peut encore utiliser ces commandes sur tous les ordinateurs via un terminal. Sur Windows le Terminal se nomme Powershell.
+          </p>
+          <h2>Quelques commandes</h3>
+          <div class="tile is-child box is-vertical">
+            <div class="content">
+              <h3>pwd</h3>
+              <p>Vous permet de savoir dans quel dossier vous vous situez</p>
+            </div>
+          </div>
+          <div class="tile is-child box is-vertical" style="margin-top: 20px !important;">
+            <div class="content">
+              <h3>ls</h3>
+              <p>Vous permet de connaitre les fichiers et les dossiers qui sont stockés où vous vous situez.</p>
+            </div>
+          </div>
+          <div class="tile is-child box is-vertical" style="margin-top: 20px !important;">
+            <div class="content">
+              <h3>cd &lt;chemin vers un dossier&gt;</h3>
+              <p>Grâce à cette commande vous pouvez vous déplacer d'un fichier à un autre</p>
+            </div>
+          </div>
+          <div class="tile is-child box is-vertical" style="margin-top: 20px !important;">
+            <div class="content">
+              <h3>mkdir &lt;nom de dossier&gt;</h3>
+              <p>Créer un dossier avec le nom inscrit</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container" style="margin: 30px auto;">
+    <div class="tile is-ancestor">
+      <div class="tile is-parent box">
+        <div class="content" style="width: 100%;">
+          <p class="title">Vos premières commandes git</p>
+          <p class="subtitle">Vos premiers pas dans le monde des grands !</p>
+          <p>
+            Git aussi a ses propres commandes
+          </p>
+          <div class="tile is-child box is-vertical">
+            <div class="content">
+              <h3>Pour Windows</h3>
+              <p>Utilisez le programme <b>Git Shell</b>. Cela vous permettra d'utiliser les mêmes commandes que sur Linux ou Mac.</p>
+            </div>
+          </div>
+          <h2>Configurons git</h2>
+          <p>Git a besoin de connaître votre identité afin de permettre à vos collaborateurs de savoir par qui ont été réalisés des modifications données.</p>
+          <div class="tile is-child box is-vertical">
+            <div class="content">
+              <h3>git config --global user.name "username"</h3>
+              <p>Détermine le nom qui sera affiché pour vos versions.</p>
+            </div>
+          </div>
+          <div class="tile is-child box is-vertical" style="margin-top: 20px !important;">
+            <div class="content">
+              <h3>git config --global user.email "email@example.com"</h3>
+              <p>Détermine l'email qui sera affiché pour vos versions.</p>
+            </div>
+          </div>
+          <h2>Gérer un projet</h2>
+          <div class="tile is-child box is-vertical">
+            <div class="content">
+              <h3>git init</h3>
+              <p>Démarre un projet git à l'endroit où vous executez la commande.</p>
+              <p>Cela va créer un fichier caché nommé <strong>.git</strong> qui va permettre de stocker l'historique et d'autres informations.</p>
+            </div>
+          </div>
+          <div class="tile is-child box is-vertical" style="margin-top: 20px !important;">
+            <div class="content">
+              <h3>git status</h3>
+              <p>Vous permet de connaître le statut de chaque fichiers du projet.</p>
+            </div>
+          </div>
+          <div class="tile is-child box is-vertical" style="margin-top: 20px !important;">
+            <div class="content">
+              <h3>git add &lt;nom de fichier&gt;</h3>
+              <p>Permet d'ajouter le fichier indiqué à la staging area.</p>
+              <p>Vous pouvez aussi indiquer le nom d'un dossier pour ajouter tous les éléments contenus dans le dossier à la staging area. En particulier, il est possible d'utiliser le caractère <strong>.</strong> (point) pour ajouter tous les fichiers.</p>
+            </div>
+          </div>
+          <div class="tile is-child box is-vertical" style="margin-top: 20px !important;">
+            <div class="content">
+              <h3>git commit -m "Message de commit"</h3>
+              <p>Créer un nouveau commit (une sorte de nouvelle version à ajouter à l'historique). Le message de commit vous permettra de savoir à qui correspond une version.</p>
+            </div>
+          </div>
+          <div class="tile is-child box is-vertical" style="margin-top: 20px !important;">
+            <div class="content">
+              <h3>git log</h3>
+              <p>Affiche les derniers commits, leur identifiant, la date de création, le message de commit, ...</p>
+            </div>
+          </div>
+          <div class="tile is-child box is-vertical" style="margin-top: 20px !important;">
+            <div class="content">
+              <h3>git checkout &lt;identifiant du commit&gt;</h3>
+              <p>Permet de revenir à une autre version, un autre commit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container" style="margin: 30px auto;">
+    <div class="tile is-ancestor">
+      <div class="tile is-parent box">
+        <div class="content" style="width: 100%;">
+          <p class="title">Exercice 1</p>
+          <p class="subtitle">Let's GIT it done !</p>
+          <ol type="1">
+            <li>Se rendre dans le dossier où nous souhaitons créer un projet (Documents par exemple)</li>
+            <li>Créer un dossier avec la commande mkdir</li>
+            <li>Se déplacer dans le dossier créé</li>
+            <li>Initialiser un répertoire git</li>
+            <li>Créer un fichier HTML</li>
+            <li>L'ajouter à la staging area</li>
+            <li>Créer un commit dont le nom sera: init</li>
+            <li>Modifier cette page pour représenter toute votre créativité</li>
+            <li>Créer un commit avec cette page</li>
+            <li>Revenir au commit précédent</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container" style="margin: 30px auto;">
+    <div class="tile is-ancestor">
+      <div class="tile is-parent box">
+        <div class="content" style="width: 100%;">
+          <p class="title">Exercice 1 - Solutions</p>
+          <ol type="1">
+            <li>cd chemin/vers/le/dossier</li>
+            <li>mkdir "Mon Super Dossier"</li>
+            <li>cd "Mon Super Dossier"</li>
+            <li>git init</li>
+            <li>touch index.html</li>
+            <li>git add index.html</li>
+            <li>git commit -m "init"</li>
+            <li>Je n'ai malheuresement pas la capacité de refléter votre créativitité :'(</li>
+            <li>
+              <ol type="a">
+                <li>git add index.html</li>
+                <li>git commit -m "j'ai rendu mon site tout beau :o"</li>
+              </ol>
+            </li>
+            <li>
+              <ol type="a">
+                <li>git log</li>
+                <li>Copiez l'identifiant du commit précédent</li>
+                <li>git checkout &lt;identifiant précédemment copié&gt;</li>
+              </ol>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container" style="margin: 30px auto;">
+    <div class="tile is-ancestor">
+      <div class="tile is-parent box">
+        <div class="content" style="width: 100%;">
+          <p class="title">Travailler en équipe</p>
+          <p class="subtitle">Commencez à partager vos projets avec vos amis !</p>
+          <div class="tile is-child box is-vertical">
+            <div class="content">
+              <h3>git clone &lt;url vers le répertoire&gt;</h3>
+              <p>Permet de clonner/copier le répertoire à partir d'un lien, par exemple un lien GitHub.</p>
+            </div>
+          </div>
+          <div class="tile is-child box is-vertical" style="margin-top: 20px !important;">
+            <div class="content">
+              <h3>git pull</h3>
+              <p>Récupère la dernière version disponnible sur l'origin.</p>
+            </div>
+          </div>
+          <div class="tile is-child box is-vertical" style="margin-top: 20px !important;">
+            <div class="content">
+              <h3>git push</h3>
+              <p>Envoie l'ensemble des commits réalisés vers l'origin. En génnéral on utilise pull avant push afin de pouvoir gérer d'éventuels conflits.</p>
+            </div>
+          </div>
+          <div class="tile is-child box is-vertical" style="margin-top: 20px !important;">
+            <div class="content">
+              <h3>git fetch</h3>
+              <p>Réalise à la fois <b>git pull</b> et <b>git push</b>. C'est ce qui est utilisé par défaut par l'utilisateur de texte Visual Studio Code</p>
+            </div>
+          </div>
+          <div class="tile is-child box is-vertical" style="margin-top: 20px !important;">
+            <div class="content">
+              <h3>git remote -v</h3>
+              <p>Liste l'ensemble des remote de ce projet que vous avez référencés auparavant. En particulier l'orgin (qui se définit tout seul lors du clone).</p>
+            </div>
+          </div>
+          <div class="tile is-child box is-vertical" style="margin-top: 20px !important;">
+            <div class="content">
+              <h3>git remote set-url origin &lt;url vers l'origin&gt;</h3>
+              <p>Vous permet de définit ou modifier l'origin. Cela vous seta très utile si vous voulez mettre en ligne un projet que vous avez débuté hors ligne.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container" style="margin: 30px auto;">
+    <div class="tile is-ancestor">
+      <div class="tile is-parent box">
+        <div class="content" style="width: 100%;">
+          <p class="title">Exercice 2</p>
+          <p class="subtitle">Let's GIT collaborative !</p>
+          <h5>Contexte</h5>
+          <p>Chaque équipe de développeurs a pour mission de réaliser un site web. Ils vont pour cela mettre en place un git et utiliser github.          </p>
+          <h5>Consignes</h5>
+          <ol type="1">
+            <li>Le groupe va devoir choisir son « David » qui va initialiser un repo et l’héberger sur github. Le repo devra contenir au moins un « README » et n’aura pour l’instant qu’une branche (master par défaut), et un premier commit sur cette branche.</li>
+            <li>David devra ensuite ajouter Alice et Bob en tant que collaborateurs sur le projet.</li>
+            <li>Les collaborateurs récupèreront le projet depuis « origin » afin de créer leur propre remote (en faisant un git clone par exemple)</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
