@@ -1,10 +1,18 @@
-FROM nginx:alpine
+FROM php:8-apache
 
-COPY ./docker/nginx.conf /etc/nginx/nginx.conf
+RUN apt-get update -y && apt-get install -y libonig-dev
 
-EXPOSE 80
+RUN docker-php-ext-install -j$(nproc) pdo pdo_mysql mbstring mysqli exif && docker-php-ext-enable mysqli
+
+RUN a2enmod rewrite
+RUN a2disconf serve-cgi-bin
+
+RUN service apache2 restart
+
+COPY ./docker/php.ini /etc/php/php.ini
+COPY . /var/www/html
 
 LABEL ORIGIN herogu.garageisep.com
 
-COPY . /var/www/html
+EXPOSE 80
 LABEL org.opencontainers.image.source https://github.com/garage-isep/wsgit
