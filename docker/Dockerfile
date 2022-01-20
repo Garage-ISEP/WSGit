@@ -1,0 +1,10 @@
+FROM nginx:alpine
+
+COPY ./docker/nginx.conf /etc/nginx/nginx.conf
+
+EXPOSE 80
+
+LABEL ORIGIN herogu.garageisep.com
+
+COPY . /var/www/html
+LABEL org.opencontainers.image.source https://github.com/garage-isep/wsgit
