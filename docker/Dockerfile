@@ -1,10 +1,13 @@
-FROM nginx:alpine
+FROM ghcr.io/garage-isep/herogu-back/herogu-php-base
 
 COPY ./docker/nginx.conf /etc/nginx/nginx.conf
 
-EXPOSE 80
+COPY . /var/www/html
+
+RUN chown -R nginx:www-data /var/www/html
+RUN chmod -R 777 /var/www/html
 
 LABEL ORIGIN herogu.garageisep.com
 
-COPY . /var/www/html
+EXPOSE 80
 LABEL org.opencontainers.image.source https://github.com/garage-isep/wsgit
