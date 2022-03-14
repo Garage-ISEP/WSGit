@@ -1,12 +1,18 @@
-FROM ghcr.io/garage-isep/herogu-back/herogu-php-base
+FROM nginx:1.21.6-alpine
 
-USER root
+LABEL maintainer="theodore.prevot@garageisep.com" \
+	org.label-schema.name="alpine" \
+	org.label-schema.vendor="GarageISEP" \
+	org.label-schema.version="8.1.2" \
+	org.label-schema.description="Docker Alpine image with Nginx for Herogu systems" \
+	org.label-schema.license="MIT" \
+	ORIGIN=herogu.garageisep.com
 
 COPY ./docker/nginx.conf /etc/nginx/nginx.conf
 
-COPY --chown=nginx:www-data --chmod=777 . /var/www/html
+EXPOSE 80
 
 LABEL ORIGIN herogu.garageisep.com
 
-EXPOSE 80
+COPY . /var/www/html
 LABEL org.opencontainers.image.source https://github.com/garage-isep/wsgit
